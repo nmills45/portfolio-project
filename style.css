@@ -1,24 +1,34 @@
 *,
 *::before,
 *::after {
-    margin:0;
-    padding:0;
+    margin:auto;
+    padding:auto;
+    height:auto;
+    width: auto;
     box-sizing: border-box;
+    /*    border: 1.5px solid red;  */
+   
 }
 @media only screen 
 and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+and (max-device-width : 480px)
+and (min-device-height: 700px)
+and (max-device-height: 1000px)
+{
 /* Styles */
-body {
-    display: flex;
-    flex-direction: column;
+
+.ul-nav {
+    flex-flow: column;
 }
+.ul-projects {
+    flex-flow: column;
+}
+
 }
 
 header {
-    border-bottom: medium groove black;
-    border-radius: .50em;
-    
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1)
+
 }
 
 
@@ -27,7 +37,6 @@ body {
 
 }
 footer {
-    border-top: medium groove black;
     margin:0em;
     padding:0em;
     border-radius: .50em;
@@ -51,13 +60,16 @@ button {
     height: 2em;
     width:4em;
     font-size: x-large;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     border-radius: .75em;
-
+    transition: 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: darkgray;
-    transition: 0.3s ease;
+    width: 4.5em;
+
+    
 }
 
 .ul-nav {
@@ -67,7 +79,7 @@ button:hover {
     padding:1rem;
     margin:1rem;
     font-size: 1.5em;
-    background-color: lightgray;
+    background-color: lightsteelblue;
     border-radius: .50em;
 }
 
@@ -88,6 +100,12 @@ a {
 img {
     width: 250px;
     height: 200px;
-    border: medium groove black;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     border-radius: .50em;
+
+}
+
+img:hover {
+    width: 300px;
+    height: 250px;
 }
